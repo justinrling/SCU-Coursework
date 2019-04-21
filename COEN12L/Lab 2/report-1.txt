@@ -1,0 +1,11 @@
+Sorted Run Times:
+	Macbeth.txt: .0335, .028, .0275		Average time: .0295s
+	Bible.txt: .489, .463, .463 		Average time: .4718s
+	Genesis.txt: .0105, .0065, .007		Average time: .0078s
+
+Unsorted Run Times:
+	Macbeth.txt: .109, .109, .108		Average time: .1087s
+	Bible.txt: 5.167, 5.165, 5.175		Average time: 5.169s
+	Genesis.txt: .1145, .110, .112		Average time: .1122s
+
+Overall: Binary search is faster
