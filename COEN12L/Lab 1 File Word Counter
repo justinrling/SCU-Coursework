@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int read_file(char *filename);	//initialize read function		
+	
+int main(int argc, char *argv[]){	//takes in arguments to run (file name) and runs read function
+	if(argc==1){
+		printf("The name of the file is missing!\n");
+		return -1;
+	}
+	read_file(argv[1]);
+}
+
+int read_file(char *filename){	//takes in file name and outputs number of words
+	FILE *fp;
+	char word[30];
+	int counter = 0;
+	
+	fp = fopen(filename, "r");
+	if(fp==NULL)
+		return -1;
+	while(fscanf(fp,"%s",word)==1){
+		counter++;
+	}
+	fclose(fp);
+	printf("There are %d words\n", counter);
+	return counter;
+}
