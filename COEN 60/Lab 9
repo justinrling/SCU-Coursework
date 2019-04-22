@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+  <head>
+      <h1 id="twen">Page Rank 20 Iterations</h1>
+      <h2 id="hun">Page Rank 100 Iterations</h2>
+  </head>
+  
+  <body>
+      <p id="y">Yahoo 20</p><br>
+      <p id="a">Amazon 20</p><br>
+      <p id="m">Microsoft 20</p><br>
+      <p id="y2">Yahoo 100</p><br>
+      <p id="a2">Amazon 100</p><br>
+      <p id="m2">Microsoft 100</p><br>
+      
+      <button onclick="pageRank()">Rank</button>
+  <script>
+      function pageRank(){
+          var yahoo = 1/3;
+          var amazon = 1/3;
+          var microsoft = 1/3;
+  
+          for(var i =0; i<20; i++){
+              var newYahoo = (yahoo*(1/2))+(amazon*(1/2))+(microsoft*0);
+              var newAmazon = (yahoo*(1/2))+(amazon*0)+(microsoft*1);
+              var newMicrosoft = (yahoo*0)+(amazon*(1/2))+(microsoft*0);
+  
+              if((Math.pow((yahoo-newYahoo),2) + (Math.pow((amazon-newAmazon),2)) + (Math.pow((microsoft-newMicrosoft),2))) <= .001){
+                document.getElementById("twen").innerHTML = "Converged at: " + (i+1);
+                  document.getElementById("y").innerHTML = "Yahoo 20: " + newYahoo;
+                  document.getElementById("a").innerHTML = "Amazon 20: " + newAmazon;
+                  document.getElementById("m").innerHTML = "Microsoft 20: " + newMicrosoft;   
+                  break;
+              }
+  
+              yahoo = newYahoo;
+              amazon = newAmazon;
+              microsoft = newMicrosoft;
+          }
+          yahoo = 1/3;
+          amazon = 1/3;
+          microsoft = 1/3;
+  
+          for(var i =0; i<100; i++){
+              var newYahoo = (yahoo*(1/2))+(amazon*(1/2))+(microsoft*0);
+              var newAmazon = (yahoo*(1/2))+(amazon*0)+(microsoft*1);
+              var newMicrosoft = (yahoo*0)+(amazon*(1/2))+(microsoft*0);
+                      
+              if((Math.pow((yahoo-newYahoo),2) + (Math.pow((amazon-newAmazon),2)) + (Math.pow((microsoft-newMicrosoft),2))) <= .001){
+                  document.getElementById("hun").innerHTML = "Converged at: " + (i+1);
+                  document.getElementById("y2").innerHTML = "Yahoo 100: " + newYahoo;
+                  document.getElementById("a2").innerHTML = "Amazon 100: " + newAmazon;
+                  document.getElementById("m2").innerHTML = "Microsoft 100: " + newMicrosoft;
+                  break;
+              }
+  
+              yahoo = newYahoo;
+              amazon = newAmazon;
+              microsoft = newMicrosoft;
+          }
+      }
+  </script>
+  </body>
