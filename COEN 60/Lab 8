@@ -1,0 +1,50 @@
+ <!DOCTYPE HTML>
+  <head>
+       <style>
+           a{
+               visibility: hidden;
+           }
+           a:visited{
+               color: black;
+          }
+      </style>
+  </head>
+ 
+  <body onload="checkVisits()">
+      <div id="visited" onclick="return false">
+          <p style="color:red;">You have visited:</p><br>
+      </div>
+      <div id="not" onclick="return false">
+          <p style="color:blue;">You have not visited:</p><br>
+      </div>
+ 
+      <div id="links">
+          <a href="http://www.google.com/" target="_blank">http://www.google.com/</a></br>
+          <a href="http://www.facebook.com/" target="_blank" >http://www.facebook.com/</a></br>
+          <a href="http://www.yahoo.com/" target="_blank" >http://www.yahoo.com/</a></br>
+          <a href="http://www.scu.edu/" target="_blank" >http://www.scu.edu/</a><br>
+      </div>
+ 
+      <script>
+          function checkVisits(){
+ 
+              var links = document.querySelectorAll('a');
+              var black = "rgb(0, 0, 0)";
+ 
+              for(var i=0;i<links.length;i++){
+                  var color = window.getComputedStyle(links[i], 'visted').color;
+                  alert(color);
+                  if(color==black){
+                      var moveLink = document.createElement("p");
+                      moveLink.innerHTML = links[i].href;
+                      document.getElementById("visited").appendChild(moveLink);
+                  }
+                  else{
+                      var moveLink = document.createElement("p");
+                      moveLink.innerHTML = links[i].href;
+                      document.getElementById("not").appendChild(moveLink);
+                  }
+              }
+         }
+      </script>
+  </body>
