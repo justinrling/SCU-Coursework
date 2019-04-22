@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+   <html>
+       <head>
+           <title>Search Engine</title>
+       </head>
+       <body>
+       <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="get"> <!--makes sure search stays in bar-->
+               Enter Search:
+               <input type="text" name="search_entered" value="<?php echo $_GET["search_entered"];?>"/>
+          <input type="submit" name="submit" value="Search"/>
+          </form>
+  
+  
+      <?php
+          $start=microtime(true); //starts time
+          $search=(isset($_GET['search_entered']) ? $_GET['search_entered'] : '');//makes sure there is value
+          $docfiles = glob("doc/*");  //searches for files
+          $result = 0; //initialize result
+  
+          if($search != ""){  //makes sure there is value
+              foreach( $docfiles as $file){   //foreach loop through array of files
+                  $content = file_get_contents($file);    //retrieve files as string
+                  if(strpos($content, $search) !== false){    //if search is in file
+                          $result++;  //result increments
+                          $strpos = strpos($content,$search); //finds where search is located in string
+                          $display = basename($file, ".rtf"); //display is path
+                          echo "<ul><li class=docitem><a href=" .  $file  . ">" . $display . "</a></li></ul>";    //outputs searches as list
+                          echo "<br>";
+                          echo substr($content, $strpos-30, 30);  //adds snippet
+                          echo "<br>";
+                  }
+              }
+          }
+  
+          $end=microtime(true);   //ends time
+          $time= $end - $start;   //final time
+          echo "<br>";
+          echo "$result " . " results " . "(" . round($time, 3) .  " seconds" . ")";      //results and time
+      ?>
+      </body>
+  </html>
