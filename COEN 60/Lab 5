@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+  <html lang="en">        <!--Justin Ling 00001356821-->
+  <head class="head">
+      <link href="homepage_layout.css" type="text/css" rel="stylesheet"/>
+      <title>Santa Clara University</title>   <!--Title-->
+      <meta charset="utf-8"/>
+  </head>
+  
+  <body>
+      <div class="header">
+      <h1 id="top">Welcome Santa Clara University's Alternate Homepage</h1>   <!--First     Header and Bookmark-->
+      </div>
+  
+      <div class="highlight">
+      <div class="top">
+          <p>Click <a href="https://www.scu.edu">here</a> to head over to the real site    </p>   <!--External Link and Paragraph-->
+  
+      <p>Or<span id="press"> press</span> Ctrl + Alt + <a href="https://www.scu.edu" ac    cesskey="s">S</a></p>  <!--Accesskey-->
+      </div>
+      </div>
+  
+      <div>
+      <h2>This Site will provide information regarding:</h2>      <!--Second Header-->
+          <dl>        <!--Ordered List-->
+              <dt><b>Schools and Majors</b></dt>
+                  <dd>Arts and Sciences, Engineering, Business</dd>
+              <dt><b>Campus Recreation</b></dt>
+                  <dd>Gymnasium and Multipurpose room</dd>
+              <dt><b>On Campus Housing</b></dt>
+                  <dd>Residential Learning Communities</dd>
+          </dl>
+  
+      </div>
+  
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DJgeFW3SDQM">    </iframe>  <!--Embedded YouTube Video-->
+  
+      <div class="table">
+      <table style="border:1px">      <!--Table-->
+          <caption>One Major from Every School</caption>
+              <tr><th>College of Arts and Sciences</th><th>School of Engineering</th><t    h>Leavey School of Business</th></tr>
+              <tr><td>Biology</td><td>Web Design</td><td>Marketing</td></tr>
+      </table>
+      </div>
+  
+      <div class="highlight">
+          <div id="bottom">
+               <h3>More Info</h3>  <!--Third Header with Tabindexes-->
+                <ul>
+                     <li><a href="https://www.scu.edu/academics/schools-and-colleges/"     ta    bindex="1">Schools</a></li>
+  
+  
+                        <li><a href="https://www.scu.edu/recreation/" tabindex="2"> Cam    pus Recreation</a></li>
+  
+  
+                           <li><a href="https://www.scu.edu/campus-life/housing/" tabin    dex="3">    Housing Accommodations</a></li>
+                 </ul>
+  
+           </div>
+      </div>
+  
+  
+<br>        <!--Spacing-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+   <div class="highlight">
+       <div id="social">
+            <p>Another List</p>
+             <ol>
+                  <li><a href="https://facebook.com">Facebook</a></li>
+                   <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+              </ol>
+   <p><a href="#top">Back to the Top</a></p>   <!--Internal Link-->
+  
+        </div>
+   </div>
+  
+  
+  </body>
+  </html>
+
+CSS
+header{ background-color:rgb(179,7,56);color:white;padding: 2px 2px 2px 2px;text-align: center;}
+ 
+ body{font-family: Helvetica;}
+  
+  h2{background-color:rgb(179,7,56);margin-right:300px;margin-left:300px;color:white;te    xt-align:center;}
+ 
+  h3{background-color:rgb(179,7,56);margin-right:300px;margin-left:300px;color: white;t    ext-align:center;}
+
+   .table{margin-right:300px;margin-left:300px;text-align:center;
