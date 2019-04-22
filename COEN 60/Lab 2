@@ -1,0 +1,141 @@
+ HTML
+  <!DOCTYPE HTML>
+  <html lang="en">        <!--Justin Ling 00001356821-->
+  <head class="highlight">
+      <link href="homepage_layout.css" type="text/css" rel="stylesheet"/>
+      <title>Santa Clara University</title>   <!--Title-->
+      <meta charset="utf-8"/>
+  </head>
+  
+  <body>
+      <div class="highlight">
+      <h1 id="top">Welcome Santa Clara University's Alternate Homepage</h1>   <!--First Header and Bookmark-->
+      </div>
+  
+      <div class="highlight">
+      <div class="top">
+          <p>Click <a href="https://www.scu.edu">here</a> to head over to the real site</p>   <!--External Link and Paragraph-->
+  
+      <p>Or<span id="press"> press</span> Ctrl + Alt + <a href="https://www.scu.edu" accesskey="s">S</a></p>  <!--Accesskey-->
+      </div>
+      </div>
+  
+      <div class="highlight">
+      <div id="middle">
+      <h2>This Site will provide information regarding:</h2>      <!--Second Header-->
+          <ol>        <!--Ordered List-->
+              <li>Schools and Majors</li>
+              <li>Campus Recreation</li>
+              <li>On Campus Housing</li>
+          </ol>
+      </div>
+      </div>
+  
+      <div class="highlight">
+      <img src="scu.png" alt="Santa Clara University" height="400" width="400"/>  <!--Image-->
+      </div>
+  
+      <div class="highlight">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DJgeFW3SDQM"></iframe>  <!--Embedded YouTube Video-->
+      </div>
+  
+      <div class="highlight">
+      <table style="border:1px">      <!--Table-->
+          <caption>One Major from Every School</caption>
+              <tr><th>College of Arts and Sciences</th><th>School of Engineering</th><th>Leavey School of Business</th></tr>
+              <tr><td>Biology</td><td>Web Design</td><td>Marketing</td></tr>
+      </table>
+      </div>
+  
+      <div class="highlight">
+      <div id="social">
+      <p>Another List</p>
+          <ol>
+              <li><a href="https://facebook.com">Facebook</a></li>
+              <li><a href="https://twitter.com">Twitter</a></li>
+              <li><a href="https://instagram.com">Instagram</a></li>
+          </ol>
+      </div>
+      </div>
+  
+      <div class="highlight">text
+      <img class="floater" src="https://www.scu.edu/media/offices/on-campus-living/student-images/CB15_BroncoStatue_3632_006-(1)-760x507.jpg" alt="bronco"     height="100" width="100"/>
+      </div>
+  
+  <br>        <!--Spacing→
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="highlight">
+  <div id="bottom">
+      <h3>More Info</h3>  <!--Third Header with Tabindexes-->
+     
+          <a href="https://www.scu.edu/academics/schools-and-colleges/" tabindex="1">Schools:</a>
+              <p>School of Engineering, College of Arts and Sciences, and Leavey School of Business</p><br>
+     
+          <a href="https://www.scu.edu/recreation/" tabindex="2"> Campus Rec:</a>
+              <p>Pat Malley Fitness and Recreation Center</p><br>
+     
+          <a href="https://www.scu.edu/campus-life/housing/" tabindex="3">Housing:</a>
+              <p>Residential Learning Communities</p><br>
+  
+      <p><a href="#top">Back to the Top</a></p>   <!--Internal Link-->
+      </div>
+      </div>
+  
+  </body>
+  </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CSS
+  #top{
+  border: 5px solid green;
+  background-color: white;
+  }
+  
+  #middle{
+  border: 5px solid blue;
+  background-color: #E8FBFB;
+  padding: 5px;
+  margin-top: 10px;
+  }
+  
+  #bottom{
+  border:5px solid red;
+  background-image: url("beach.jpg");
+  }
+  
+  #social{
+  border:5px solid purple;
+  text-align: left;
+  }
+  
+  .highlight:hover{
+  border:6px solid yellow;
+  }
+  
+  img.floater{
+          float: right;
+  }       
+  
+  p:hover, a:hover, h1:hover, table:hover, th:hover, td:hover, li:hover, h2:hover, h3:hover, img:hover, iframe:hover{
+      border: 6px solid yellow;
+  }
+  
