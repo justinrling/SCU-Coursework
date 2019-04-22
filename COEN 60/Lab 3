@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>						
+   <html>
+   <head>
+       <title>Fast Food Photo Album</title>
+   </head>
+   
+   <body>
+   <ul>
+       <?php
+          $imgs = glob("photo/*.jpg");
+  
+         foreach($imgs as $img){
+              echo "<li><a href='". $img . "'>" . basename($img).PHP_EOL . "</a>" . "(" .     round(filesize($img)/1024) . "KB" . ")" . "</li>" . "/n";
+  } ?>
+  </ul>
+  
+  </body>
+  
+  </html>
