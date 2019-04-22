@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+ <body>
+  <h1> GRE Vocab Quiz</h1>
+   
+  <script>
+       function checkAnswer(){
+           var radios = document.getElementsByTagName("input");
+           var answer = document.getElementById("answer").value;
+          var result = document.getElementById("result");
+      for(var i=0; i<radios.length; i++){
+              if(radios[i].type === "radio" && radios[i].checked){
+                  if(radios[i].value == answer){
+                      result.innerHTML = "Correct!";
+                  }
+                  else{
+                      result.innerHTML = "Incorrect!";
+                  }
+              }
+      }
+      }
+  </script>
+  
+  <?php //choose random words
+  $words=file("words.txt");
+  shuffle($words);
+  $choices=array_slice($words,0,4);
+  list($answer, $part, $definition) = explode("\t", $choices[rand(0,3)]);
+  ?>
+  
+  <h1><?php print $answer."-".$part ?></h1>
+ <p id="result">What is the definition?</p>
+  <form action="wordtestJS.php" method="post">
+  <?php
+  for($i=0;$i<4;$i++){
+      $line=$choices[$i];
+      list($word, $part,$definition) = explode("\t", $line);
+  ?>  
+  
+  <input type="radio" name="guess" value="<?=$word ?>"></input> <?=$definition ?>
+  <br>
+  
+  <?php
+  }
+  ?>
+  
+  <div>
+ <input id="answer" type="hidden" name="answer" value="<?= $answer ?>" />
+  <input type="submit" value="Try Another Word" />
+  </form>
+  <input id="click" type="button" value="Check" onclick="checkAnswer();" />
+  </div>
+  </body>
