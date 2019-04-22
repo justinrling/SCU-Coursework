@@ -1,0 +1,58 @@
+<html lang="en">                <!--Justin Ling 00001356821-->
+<head>
+        <title>Santa Clara University</title>   <!--Title-->
+        <meta charset="utf-8"/>
+</head>
+ 
+<body>
+        <h1><a id="top">Welcome Santa Clara University's Alternate Homepage</a></h1>    <!--First Header and Bookmark-->
+        <p>Click <a href="https://www.scu.edu">here</a> to head over to the real site</p>       <!--External Link and Paragraph-->
+ 
+        <p>Or press Ctrl + Alt + <a href="https://www.scu.edu" accesskey="s">S</a></p>  <!--Accesskey-->
+ 
+        <h2>This Site will provide information regarding:</h2>          <!--Second Header-->
+                <ol>            <!--Ordered List-->
+                        <li>Schools and Majors</li>
+                        <li>Campus Recreation</li>
+                        <li>On Campus Housing</li>
+                </ol>
+        <img src="scu.png" alt="Santa Clara University" height="400" width="400"/>      <!--Image-->
+ 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DJgeFW3SDQM"></iframe>      <!--Embedded YouTube Video-->
+ 
+        <table style="border:1px">              <!--Table-->
+                <caption>One Major from Every School</caption>
+                        <tr><th>College of Arts and Sciences</th><th>School of Engineering</th><th>Leavey School of Business</th></tr>
+                        <tr><td>Biology</td><td>Web Design</td><td>Marketing</td></tr>
+        </table>
+ 
+<br>            <!--Spacing-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ 
+        <h3>More Info</h3>      <!--Third Header with Tabindexes-->
+ 
+                <a href="https://www.scu.edu/academics/schools-and-colleges/" tabindex="1">Schools:</a>
+                        <p>School of Engineering, College of Arts and Sciences, and Leavey School of Business</p><br>
+ 
+                <a href="https://www.scu.edu/recreation/" tabindex="2"> Campus Rec:</a>
+                        <p>Pat Malley Fitness and Recreation Center</p><br>
+ 
+                <a href="https://www.scu.edu/campus-life/housing/" tabindex="3">Housing:</a>
+                        <p>Residential Learning Communities</p><br>
+ 
+        <p><a href="#top">Back to the Top</a></p>       <!--Internal Link-->
+ 
+</body>
+</html>
