@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+  <head>
+       <link rel="stylesheet" type="text/css" href="squares.css">
+   </head>
+   <body>
+       <div id="big">
+       </div>
+   
+       <input type="button" value="Add Square" onclick="addSquare()">
+      <input type="button" value="Change Colors" onclick="changeColors()">
+      <input type="button" value="Delete All" onclick="deleteAll()">
+      <script>
+          function addSquare(){
+              var box=document.createElement("div");
+              box.className="small";
+              box.style.left=Math.floor(Math.random()*900)+10 + "px"; 
+              box.style.top=Math.floor(Math.random()*400)+10 + "px";
+              var parent = document.getElementById("big");
+              box.style.backgroundColor=getRandomColor();
+              parent.appendChild(box);
+          }
+  
+          function deleteAll(){
+              var parent = document.getElementById("big");
+              parent.innerHTML="";
+          }
+  
+          function getRandomColor(){
+              var letters="0123456789abcdef";
+              var color="#";
+                  for(var j=0;j<6;j++){
+                      color+=letters.charAt(Math.floor(Math.random()*letters.length));
+                  }
+                  return color;
+              }
+          
+          function changeColors(){
+              var boxes = document.querySelectorAll(".small");
+              for(var i =0; i<boxes.length; i++){
+                  boxes[i].style.backgroundColor=getRandomColor();
+              }
+          }
+      </script>
+  
+  </body>
+                  
+
+
+
+
+
+
+
+
+CSS
+#big{border:1px solid black;
+  2     height:500px;
+  3     width:1000px;
+  4     margin: 0px;
+  5 }
+  6 .small{border:1px solid black;
+  7     height:50px;
+  8     width:50px;
+  9     position: fixed;
+ 10 }
