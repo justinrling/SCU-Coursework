@@ -5,7 +5,7 @@
 #include <string.h>
 #include "list.h"
 
-//Project 4: Creating a deque (doubly linked circular list with a dummy node
+//Project 4: Creating a deque (doubly linked circular list with a dummy node)
 
 struct list{
 	int count;
