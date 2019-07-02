@@ -1,0 +1,12 @@
+String
+
+Macbeth: .016, .012, .011	Avg: .013s
+Bible: .143, .116, .119 	Avg: .126s
+Genesis: .019, .015, .014	Avg: .016s
+
+
+Generic
+
+Macbeth: .017, .013, .013	Avg: .0143s
+Bible: .122, .122, .121		Avg: .12167s
+Genesis: .014, .014, .014	Avg: .014s 
