@@ -1,0 +1,67 @@
+Part 1 (50 pts)
+Here you will practice setting up a webpage on the student webpages server.
+
+Open the terminal and change into your webpages directory
+cd /webpages/<username>
+Create a directory called coen161
+mkdir coen161
+Download the index.html file and copy it into your new directory
+Open a browser and go to your new webpage
+http://students.engr.scu.edu/~<username>/coen161/index.html (Links to an external site.)
+Check the permissions of your coen161 directory files
+ls -la
+You should see something like -rw-r--r-- in front of each file
+Note: Directories start with d, drwx------
+Note: The . directory is your current directory
+Change the permissions of your directory and any files that don't have read permissions for everyone
+the chmod command lets you set the permissions of a file or directory
+chmod 777 -  the 3 numbers represent permissions for user, group, and world respectively
+Permissions have the following values
+4 -  read
+2 - write
+1 - execute
+7 - all permissions
+6 - read & write
+5 - read & execute
+3 - write & execute
+chmod 700 myfile - gives you all permissions to myfile and no permissions for everyone else
+chmod 755 myfile - gives you all permissions to myfile and read & execute permissions for everyone else
+Note: Never give write access to anyone other than yourself because then anyone can go and change your files
+Check your page in the browser, you should be able to see it at this point
+Follow the comments to personalize your new page
+If you're comfortable with it, feel free to add some styling to the page (optional)
+Part 2 (50 pts)
+ Here you will have some practice with HTML lists. (https://www.w3schools.com/html/html_lists.asp (Links to an external site.))
+
+Copy mycooking.html into your directory
+Open it in the browser and resolve any permission issues
+http://students.engr.scu.edu/~<username>/coen161/mycooking.html
+Copy the image choconut.jpg into your directory and add it in the div with id "imagediv"
+https://www.w3schools.com/html/html_images.asp (Links to an external site.)
+In the div "contentdiv" you will create two lists
+Create a definition list with the following definitions
+al dente - A correct degree of doneness for pasta and vegetables.
+baste - Brush oil around item to be cooked to prevent dryness.
+pinenut - Also called pignoli.
+Create lists for the following descriptions
+The ingredients:
+
+100 g. flour
+
+10 g. sugar
+
+1 cup water
+
+2 eggs
+
+salt, pepper
+
+The procedure:
+
+Mix dry ingredients thoroughly.
+
+Pour in wet ingredients.
+
+Mix for 10 minutes.
+
+Bake for one hour at 300 degrees.
