@@ -1,0 +1,89 @@
+Intro to Flexbox
+In this assignment, you will be exploring the flexbox interface using the website created in Lab 2.
+
+Going back to your webpages directory and navigate to the site you created in Lab 2.
+
+$ cd /webpages/your_username/lab2
+Your site can be found under your student's webpage URL
+
+http://students.engr.scu.edu/~your_username/coen161/lab2/ (Links to an external site.)
+
+Note: If you're still having issues with your webpages directory you can type webpage directly into your terminal. It will bring an interactive utility that you can use to troubleshoot your webpage. Start by entering 5 to see the status of your page. 
+
+Part 1 - Body (20 pts)
+Before we start modifying our page, let's apply one new CSS concept we learned in class: box-sizing. Add the following styles to the top of your shared CSS file.
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+Next, let's restructure our page a bit. Looking at the current layout of our page, we can see that it consists of three sections: the navbar (highlighted in red), the content (highlighted in blue), and the footer (highlighted in green).
+
+3 Body Sections
+
+Let's reflect this in our HTML by creating three distinct sections in our body. We already have two, the nav and the footer. For the third section, wrap the rest of your content in a div and give it the class content. This should contain everything highlighted in blue above.
+
+Now, looking at our HTML,  we have a body that contains three items. Let's use Flexbox to layout the content of our page. Start by giving the body of your document the display: flex; property.
+
+By default, this will layout our three items in a row. However, we want them to be in a column. Use the flex-direction property to change the direction your flexbox lays out the items.
+
+Last but not least, we want our middle section, the content, to take up any remaining space in our body. To do that, set the flex-grow property for your content div to 1 so that it grows to fill in the remaining space.
+
+Now rinse and repeat this process on your 4 column layout on page 2.
+
+Part 2 - Navbar (20 pts)
+Next, let's convert the navbar to use the Flexbox layout module. 
+
+Start by the nav element to a flex container, just like we did to our body above.
+Next, let's change the design of our navbar a bit. We want to keep the name of the page on the left, but let's move the navigation links all the way to the right of our navbar. Since there should only be two elements in our nav, the home link  and the navigation list, we can achieve this effect by setting the justify-content property of our nav to space-between so that the flexbox applies any extra space between the two elements.
+Flexbox header
+Lastly, to be consistent in our approach for laying out content, let's change our navigation links from using a float to lay them out horizontally to using flexbox. What should your flex container be?
+Part 3 - Content (20 pts)
+Next, let's shift focus back to the content section of our page. We will have to do some restructuring here as well. Make the content div a flex container. At first, it may not look like much, but let's think about the layout we're trying to build.
+
+content sections
+
+Our content should contain two items. Restructure your HTML so that inside your content div there are only two child divs, one for the left column and one for the right column. Keep in mind, we want our left column to be 1/4th of our screen and the left should be 3/4ths. To accomplish this, you can use the flex-basis property to set each column to be the right percentage width of our screen.
+
+Now, looking at each column, you can see that it is now a container that has multiple items inside of it. So let's apply our flexbox approach to each column so that it becomes a flex container. 
+
+Hint: because these are columns you might have to change your flex-direction.
+
+column sections
+
+Initially, your spacing might not look particularly great. Luckily, Flexbox gives us some good ways to deal with the spacing of our content. For each column, set the justify-content property to space-around. This should give each item in our column a bit of breathing room not just to each other, but with the start and end of the flex container as well.
+
+Once you're happy with your newly refactored, flexbox page, it's time to change up your second page to use Flexbox as well! Go back through these steps, thinking about how the content on that page is laid out.
+
+Hint: Page 2 is made up of 4 identical columns, so we can reuse 1 CSS class to style each one.
+
+Intro to JavaScript
+Download the two starter files, part1.html and part2.html, and put them in your webpages directory under a new directory called lab3
+
+Make sure to check your directory and file permissions are set to 755. Go to a browser and go to your page and load each of the three files.
+
+Part 1 - Variables (20 pts)
+Go to http://students.engr.scu.edu/~your_username/coen161/lab3/part1.html (Links to an external site.) and examine the outputs in the console. 
+
+Note: to access the developer console on most browsers use the shortcut ctrl + shift + i or cmd + option + i if you're on a Mac. 
+
+Open the HTML file in a text editor.
+
+Go through the examples and answer the questions in the comments. 
+Answer the question directly in the comment
+Write any code directly into the script
+Upload your completed file
+Part 2 - Functions (20 pts)
+Go to http://students.engr.scu.edu/~your_username/coen161/lab3/part2.html (Links to an external site.)
+
+Open the HTML file in a text editor and implement the three functions.
+
+Write a function that takes an array and returns the minimum value in that array (Do not use Math.min, I want you to implement this without using the Math library)
+Write a function that checks whether or not the given string is a palindrome
+Write a function that returns the string that occurs the most in an array of strings 
+(For example, ['green','red','red','blue'] would return red. Assume that there is only one string that occurs the most)
+Note: While test data is provided, they don't test every case. You should come up with additional test cases to ensure the correctness of your functions
+
+Submission
+For the Flexbox portion, submit both your updated HTML files and your updated CSS stylesheet. For the JavaScript portion, submit the two modified HTML files.
