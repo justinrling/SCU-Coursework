@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 4 - Part 2</title>
+	<style>
+		/* add any necessary styles here */
+	</style>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<label>Input #1 <input id="input1" type="text"></label>
+	<label>Input #2 <input id="input2" type="text"></label>
+	<input type="button" value="add">
+	<input type="button" value="subtract">
+	<input type="button" value="multiply">
+	<input type="button" value="divide"> 
+	<div id="resultDiv">Operator: <span id="operator"></span><br>Result:<span id="result"></span><br><input type="button" value="clear"></div>
+	<script>
+		// Your code goes here
+		document.querySelector("input[value=add]").onclick = add;
+		document.querySelector("input[value=subtract]").onclick = subtract;
+		document.querySelector("input[value=multiply]").onclick = multiply;
+		document.querySelector("input[value=divide]").onclick = divide;
+		document.querySelector("input[value=clear]").onclick = clear;
+
+		function add(){
+			var x = document.getElementById("input1").value;
+			var y = document.getElementById("input2").value;
+			var result = parseFloat(x) + parseFloat(y);
+			document.getElementById("operator").innerHTML = "Addition";
+			document.getElementById("result").innerHTML = result;
+			document.getElementById("resultDiv").style = "visibility: visible";
+		}
+
+		function subtract(){
+			var x = document.getElementById("input1").value;
+			var y = document.getElementById("input2").value;
+			var result = parseFloat(x) - parseFloat(y);
+			document.getElementById("operator").innerHTML = "Subtraction";
+			document.getElementById("result").innerHTML = result;
+			document.getElementById("resultDiv").style = "visibility: visible";
+		}
+
+		function multiply(){
+			var x = document.getElementById("input1").value;
+			var y = document.getElementById("input2").value;
+			var result = parseFloat(x) * parseFloat(y);
+			document.getElementById("operator").innerHTML = "Multiplication";
+			document.getElementById("result").innerHTML = result;
+			document.getElementById("resultDiv").style = "visibility: visible";
+		}
+
+		function divide(){
+			var x = document.getElementById("input1").value;
+			var y = document.getElementById("input2").value;
+			var result = Math.floor(parseFloat(x)/parseFloat(y));
+			document.getElementById("operator").innerHTML = "Division";
+			document.getElementById("result").innerHTML = result;
+			document.getElementById("resultDiv").style = "visibility: visible";
+		}
+
+		function clear(){
+			document.getElementById("input1").value = "";
+			document.getElementById("input2").value = "";
+			document.getElementById("resultDiv").style = "visibility: hidden"
+		}
+	</script>
+</body>
+</html>
