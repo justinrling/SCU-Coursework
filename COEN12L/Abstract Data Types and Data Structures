@@ -1,0 +1,5 @@
+Data abstraction: abstract data types, information hiding, interface specification. Basic data structures: stacks, queues, lists, binary trees, hashing, tables, graphs; 
+implementation of abstract data types in the C language. 
+Internal sorting: review of selection, insertion, and exchange sorts; quicksort, heapsort; recursion. Analysis of run-time behavior of algorithms; Big-O notation. 
+Introduction to classes in C++. Credit not allowed for more than one introductory data structures class, such as COEN 12 or CSCI 61. 
+Prerequisite: a grade of C- or better in either COEN 11 or 44. Corequisite: COEN 12L. Recommended corequisite: COEN 19 or MATH 51. (4 units)
